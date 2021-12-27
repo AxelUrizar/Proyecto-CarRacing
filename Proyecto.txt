@@ -1,0 +1,44 @@
+- Pantallas :
+	- Press Start.
+	- Elegir coches.
+	- Carrera.
+	- Resultado Carrera.
+
+COMO?? 1.Inyectar HTML desde JS / 2.Crear la estructura en el HTML y ocultar por hidden
+
+Funcionalidades:
+	- Crear Clase de coche:
+		Prop:
+			- VelocidadActual (Random)
+
+			- VelocidadMax 
+			- VelocidadMin
+			- Peso
+			- Vuelta
+			- MetrosRealizados
+			- posicion
+
+		Methods:
+			- acelerar()
+			- ganar()
+			- pasarVuelta()
+
+	- Crear Clase Circuito:
+		Prop:
+			- Coches[]
+			- VueltasMax.
+			- MetrosVuelta		
+
+		Methods:
+			- acabar()
+			- clasificacion()
+
+	- Estetica CSS.
+	- Cambiar de fase.
+	- Equilibrar los coches pero que sean distintos rangos.
+	- Carrera:
+		Mostrar coches prop.
+		Boton velocidad rand.
+		Pasar turno.
+	
+			
