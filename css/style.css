@@ -10,12 +10,6 @@
     justify-content: space-between;
 }
 
-#coches > div {
-    height: 10em;
-    width: 10em;
-    background-color: black;
-}
-
 #estadistica {
     display: flex;
     justify-content: center;
