@@ -1,0 +1,19 @@
+/* ---------------- Pantalla carrera -------------------*/
+#pantallaCarrera {
+    display: flex;
+    flex-direction: column;
+}
+
+#coches {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+#estadistica {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+
+}
+/* ----------------------------------------------------  */

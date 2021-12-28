@@ -42,3 +42,6 @@ Funcionalidades:
 		Pasar turno.
 	
 			
+Implementacion Futura:
+	- El usuario podra elegir mas de un coche.
+		(Insertar codigo HTML en JS)
