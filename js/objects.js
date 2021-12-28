@@ -7,7 +7,34 @@ class Pilot{
         this.velocidadMin = velocidadMin;
         this.peso = peso
         this.vuelta = 0;
+        this.velocidadActual = 0;
+        this.metrosRealizados = 0;
+    }
+    acelerar(){
+        this.velocidadActual = parseInt(Math.random() * (this.velocidadMax - this.velocidadMin) + this.velocidadMin);
+        recorrido();
+    }
+    recorrido(){
+        this.metrosRealizados += this.velocidadActual;
+    }
+    pasarVuelta(metrosVuelta){
+        if (this.metrosRealizados >= metrosVuelta){
+            this.vuelta ++;
+            this.metrosRealizados -= metrosVuelta;
+        }
+    }
+    finCarrera(vueltaMax, coches){
+        if (this.vuelta > vueltaMax){
 
+        }
+    }
+}
+class Circuito{
+    constructor(nombre, metrosVuelta, coches, vueltaMax){
+        this.nombre = nombre;
+        this.metrosVuelta = metrosVuelta;
+        this.coches = coches;
+        this.vueltaMax = vueltaMax;
     }
 }
 
@@ -32,3 +59,6 @@ let allPlayers = {
     "7" : player7,
     "8" : player8
 }
+let participantes = [allPlayers[1], allPlayers[2], allPlayers[3], allPlayers[4]];
+//Instancio circuitos
+let circuito1 = new Circuito("Reino Campinyon", 500, participantes, 3 );
