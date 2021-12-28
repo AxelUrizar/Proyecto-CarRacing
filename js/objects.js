@@ -11,12 +11,13 @@ class Pilot{
         this.metrosRealizados = 0;
         this.posicion = 0;
     }
-    acelerar(){
-        this.velocidadActual = parseInt(Math.random() * (this.velocidadMax - this.velocidadMin) + this.velocidadMin);
-        recorrido();
-    }
     recorrido(){
         this.metrosRealizados += this.velocidadActual;
+    }
+    
+    acelerar(){
+        this.velocidadActual = parseInt(Math.random() * (this.velocidadMax - this.velocidadMin) + this.velocidadMin);
+        this.recorrido();
     }
     pasarVuelta(metrosVuelta){
         if (this.metrosRealizados >= metrosVuelta){
@@ -24,19 +25,12 @@ class Pilot{
             this.metrosRealizados -= metrosVuelta;
         }
     }
-    posicion(coches){
-        for (let i = 0; i < coches.length; i++) {
-            for (let z = 0; z < coches.length; z++) {
-                if (coches[i] !== coches[i]) {
-                }
-            }
-        }
-    }
-    finCarrera(vueltaMax){
-        if (this.vuelta > vueltaMax){
-            for()
-        }
-    }
+
+    // finCarrera(vueltaMax){
+    //     if (this.vuelta > vueltaMax){
+         
+    //     }
+    // }
 }
 class Circuito{
     constructor(nombre, metrosVuelta, coches, vueltaMax){
@@ -45,6 +39,24 @@ class Circuito{
         this.coches = coches;
         this.vueltaMax = vueltaMax;
     }
+
+    posicion(){
+
+        this.coches = this.coches.sort((i, z) => z.vuelta - i.vuelta);
+        let cochesOrdenados = [];
+        for (let i = 0; i <= this.vueltaMax; i++) {
+            let arrayCochesVuelta = this.coches.filter(coche => coche.vuelta == i);
+            arrayCochesVuelta.sort((i, z) => i.metrosRealizados - z.metrosRealizados);
+            cochesOrdenados.push(arrayCochesVuelta);
+        }
+    }
+
+    start() {
+        for (let i = 0; i < this.coches.length; i++) {
+            this.coches[i].acelerar();
+        }
+    }
+
 }
 
 //Instancio corredores
@@ -69,5 +81,8 @@ let allPlayers = {
     "8" : player8
 }
 let participantes = [allPlayers[1], allPlayers[2], allPlayers[3], allPlayers[4]];
+participantes[0].vuelta = 1;
+participantes[2].vuelta = 3;
+participantes[3].vuelta = 3;
 //Instancio circuitos
-let circuito1 = new Circuito("Reino Campinyon", 500, participantes, 3 );
+let circuito1 = new Circuito("Reino Campinyon", 500, participantes, 3);
