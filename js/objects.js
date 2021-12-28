@@ -9,6 +9,7 @@ class Pilot{
         this.vuelta = 0;
         this.velocidadActual = 0;
         this.metrosRealizados = 0;
+        this.posicion = 0;
     }
     acelerar(){
         this.velocidadActual = parseInt(Math.random() * (this.velocidadMax - this.velocidadMin) + this.velocidadMin);
@@ -23,9 +24,17 @@ class Pilot{
             this.metrosRealizados -= metrosVuelta;
         }
     }
-    finCarrera(vueltaMax, coches){
+    posicion(coches){
+        for (let i = 0; i < coches.length; i++) {
+            for (let z = 0; z < coches.length; z++) {
+                if (coches[i] !== coches[i]) {
+                }
+            }
+        }
+    }
+    finCarrera(vueltaMax){
         if (this.vuelta > vueltaMax){
-
+            for()
         }
     }
 }
