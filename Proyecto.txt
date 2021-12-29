@@ -20,8 +20,7 @@ Funcionalidades:
 
 		Methods:
 			- acelerar() HECHO
-			- ganar() 
-			- pasarVuelta()
+			- pasarVuelta() HECHO
 
 	- Crear Clase Circuito: HECHO
 		Prop:
@@ -30,7 +29,7 @@ Funcionalidades:
 			- MetrosVuelta		
 
 		Methods:
-			- acabar() 
+			- acabar()
 			- clasificacion() HECHO
 
 	- Estetica CSS.
@@ -41,6 +40,11 @@ Funcionalidades:
 		Boton velocidad rand. HECHO
 		Pasar turno. HECHO
 		Diseño de los coches (colocarlos en la instancia)
+		Hacer que los coches paren cuando acaben la carrera
+		Volver al inicio
+		Colocar las imagenes
+		Poner font-family
+
 			
 Implementacion Futura:
 	- El usuario podra elegir mas de un coche.
