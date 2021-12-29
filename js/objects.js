@@ -19,30 +19,38 @@ class Pilot{
         this.velocidadActual = parseInt(Math.random() * (this.velocidadMax - this.velocidadMin) + this.velocidadMin);
         this.recorrido();
     }
-    
-    pasarVuelta(metrosVuelta){
-        if (this.metrosRealizados >= metrosVuelta){
-            this.vuelta ++;
-            this.metrosRealizados -= metrosVuelta;
+
+    pasarVuelta(metrosVuelta, vueltaMax){
+        if (this.vuelta < vueltaMax && this.metrosRealizados >= metrosVuelta) {
+                this.vuelta ++;
+                this.metrosRealizados -= metrosVuelta;
+        } 
+        if (this.vuelta >= vueltaMax) {
+            alert(this.nombre + ' a quedado en la posicion ' + this.posicion);
+            return this.finCarrera();
+            // return this;
         }
+        return null;
+
     }
 
-    // finCarrera(vueltaMax){
-    //     if (this.vuelta > vueltaMax){
-         
-    //     }
-    // }
+    finCarrera(){
+        console.log(this);
+            return this;
+    }
 }
+
 class Circuito{
     constructor(nombre, metrosVuelta, coches, vueltaMax){
         this.nombre = nombre;
         this.metrosVuelta = metrosVuelta;
         this.coches = coches;
+        // this.cochesFinalizados = [];
         this.vueltaMax = vueltaMax;
     }
 
     posicion(){
-
+        // Ordeno array 
         this.coches = this.coches.sort((i, z) => z.vuelta - i.vuelta);
         let cochesOrdenados = [];
         for (let i = this.vueltaMax; i >= -1; i--) {
@@ -54,6 +62,7 @@ class Circuito{
                 cochesOrdenados.push(coche);
             }
         }
+
         this.coches = cochesOrdenados;
 
         for (let i = 0; i < this.coches.length; i++) {
@@ -64,26 +73,38 @@ class Circuito{
     start() {
         for (let i = 0; i < this.coches.length; i++) {
             this.coches[i].acelerar();
+            this.coches[i].pasarVuelta(this.metrosVuelta, this.vueltaMax);
+            // this.cochesFinalizados.push(this.coches[i].pasarVuelta(this.metrosVuelta, this.vueltaMax));
+            // console.log(this.coches[i].pasarVuelta(this.metrosVuelta, this.vueltaMax));
+            
         }
         this.posicion();
         this.printarCarrera();
-        console.log(this.coches);
+
+        
+        // if (this.coches.length === this.cochesFinalizados.length){ 
+        //     this.cochesFinalizados = this.cochesFinalizados.filter(function (coche) { return coche != null;});
+        //     for (let i = 0; i < this.cochesFinalizados.length; i++) {
+        //         document.getElementById('finalizacion').textContent += '' + this.cochesFinalizados[i].nombre;       
+        //     }
+            
+        // }
     }
 
     printarCarrera() {
         let piloto = document.getElementsByClassName('piloto');
         let velocidad = document.getElementsByClassName('velocidad');
-        let metrosRecorridos = document.getElementsByClassName('metrosRecorridos');
+        // let metrosRecorridos = document.getElementsByClassName('metrosRecorridos');
         let metrosParaVuelta = document.getElementsByClassName('metrosParaVuelta');
         let vuelta = document.getElementsByClassName('vuelta');
-        let posicion = document.getElementsByClassName('posicion');
+        // let posicion = document.getElementsByClassName('posicion');
         for (let i = 0; i < this.coches.length; i++) {
             piloto[i].textContent = 'Piloto: ' + this.coches[i].nombre;
             velocidad[i].textContent = 'Velocidad: ' + this.coches[i].velocidadActual;
-            metrosRecorridos[i].textContent = 'Metros Recorridos: ' + this.coches[i].metrosRealizados;
+            // metrosRecorridos[i].textContent = 'Metros Recorridos: ' + this.coches[i].metrosRealizados;
             metrosParaVuelta[i].textContent = 'Metros para dar la vuelta: \n' + (this.metrosVuelta - this.coches[i].metrosRealizados);
             vuelta[i].textContent = 'Vuelta: ' + this.coches[i].vuelta;
-            posicion[i].textContent = 'Posicion: ' + this.coches[i].posicion;
+            // posicion[i].textContent = 'Posicion: ' + this.coches[i].posicion;
         }
     }
 
@@ -115,4 +136,4 @@ let participantes = [allPlayers[1], allPlayers[2], allPlayers[3], allPlayers[4]]
 // participantes[2].vuelta = 3;
 // participantes[3].vuelta = 3;
 //Instancio circuitos
-let circuito1 = new Circuito("Reino Campinyon", 500, participantes, 3);
+let circuito1 = new Circuito("Reino Campinyon", 500, participantes, 1);
