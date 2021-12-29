@@ -19,6 +19,7 @@ class Pilot{
         this.velocidadActual = parseInt(Math.random() * (this.velocidadMax - this.velocidadMin) + this.velocidadMin);
         this.recorrido();
     }
+    
     pasarVuelta(metrosVuelta){
         if (this.metrosRealizados >= metrosVuelta){
             this.vuelta ++;

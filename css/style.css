@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'mario';
+    src: url('/font/mario_kart_f2.ttf');
+}
+
+h2 {
+    font-family: mario;
+    color: silver;
+}
+
 /* ---------------- Pantalla carrera -------------------*/
 #pantallaCarrera {
     display: flex;
