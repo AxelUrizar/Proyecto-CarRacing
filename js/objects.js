@@ -86,6 +86,7 @@ class Circuito{
     finalizacionCarrera () {
         if (this.cochesFinalizados.length === this.coches.length) {
             console.log('CARRERA FINALIZADA');
+            document.getElementById('buttonCorrer').textContent = 'JUEGA DE NUEVO';
         }
     }
 
