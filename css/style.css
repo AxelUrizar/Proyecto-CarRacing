@@ -6,6 +6,10 @@
 h2 {
     font-family: mario;
     color: silver;
+    font-size: 40px;
+    font-style: oblique;
+    text-shadow: 2px 2px 2px gray;
+    
 }
 
 /* ---------------- Pantalla carrera -------------------*/
@@ -26,4 +30,23 @@ h2 {
     justify-content: space-between;
 
 }
-/* ----------------------------------------------------  */
+/* ---------------------Tarjetas--------------------  */
+
+.card{
+   box-shadow: 5px 5px 5px black;
+   background-color: red;
+   font-family: mario;
+   font-size: 8px;
+}
+/* ---------------------boton correr--------------------  */
+.buttonCorrer{
+    position: relative;
+    background-color: red;
+    border: solid 25px goldenrod;
+    font-family: mario;
+    color: white;
+    border-radius: 50%;
+    width: 23%;
+    block-size: 200px;
+    left: 400px;
+}
