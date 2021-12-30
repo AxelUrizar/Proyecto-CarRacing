@@ -39,7 +39,7 @@ h2 {
    font-size: 8px;
 }
 /* ---------------------boton correr--------------------  */
-.buttonCorrer{
+#buttonCorrer{
     position: relative;
     background-color: red;
     border: solid 25px goldenrod;
