@@ -7,7 +7,7 @@
 COMO?? 1.Inyectar HTML desde JS / 2.Crear la estructura en el HTML y ocultar por hidden
 
 Funcionalidades:
-	- Crear Clase de coche:
+	- Crear Clase de coche: HECHO
 		Prop:
 			- VelocidadActual (Random)
 
@@ -19,11 +19,10 @@ Funcionalidades:
 			- posicion
 
 		Methods:
-			- acelerar()
-			- ganar()
-			- pasarVuelta()
+			- acelerar() HECHO
+			- pasarVuelta() HECHO
 
-	- Crear Clase Circuito:
+	- Crear Clase Circuito: HECHO
 		Prop:
 			- Coches[]
 			- VueltasMax.
@@ -31,16 +30,21 @@ Funcionalidades:
 
 		Methods:
 			- acabar()
-			- clasificacion()
+			- clasificacion() HECHO
 
 	- Estetica CSS.
 	- Cambiar de fase.
-	- Equilibrar los coches pero que sean distintos rangos.
+	- Equilibrar los coches pero que sean distintos rangos. HECHO
 	- Carrera:
-		Mostrar coches prop.
-		Boton velocidad rand.
-		Pasar turno.
-	
+		Mostrar coches prop. HECHO
+		Boton velocidad rand. HECHO
+		Pasar turno. HECHO
+		Diseño de los coches (colocarlos en la instancia)
+		Hacer que los coches paren cuando acaben la carrera
+		Volver al inicio
+		Colocar las imagenes
+		Poner font-family
+
 			
 Implementacion Futura:
 	- El usuario podra elegir mas de un coche.
