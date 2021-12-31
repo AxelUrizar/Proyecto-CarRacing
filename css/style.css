@@ -12,10 +12,34 @@ h2 {
     
 }
 
-/* ---------------- Pantalla carrera -------------------*/
-#pantallaCarrera {
+/*----------------- Default Pantallas ------------------*/
+
+.pantallas {
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pPantallas:hover {
+    cursor: pointer;
+}
+
+/* ---------------- Pantalla Inicio -------------------*/
+
+
+
+/* ---------------- Pantalla Personajes -------------------*/
+
+#pantallaPersonajes{
+    display: none;
+}
+
+/* ---------------- Pantalla Carrera -------------------*/
+#pantallaCarrera {
     flex-direction: column;
+    display: none;
 }
 
 #coches {
@@ -49,4 +73,10 @@ h2 {
     width: 23%;
     block-size: 200px;
     left: 400px;
+}
+
+/* ---------------- Pantalla Podio -------------------*/
+
+#pantallaPodio{
+    display: none;
 }

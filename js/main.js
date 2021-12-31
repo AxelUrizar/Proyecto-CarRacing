@@ -1,3 +1,16 @@
+//
+//-------------------------funcion para cambiar entre pantallas-----------------------------------
+//
+
+const cambiarPantalla = (pantalla) => {
+    let arrPantallas = ['pantallaInicio', 'pantallaPersonajes', 'pantallaCarrera', 'pantallaPodio'];
+    arrPantallas = arrPantallas.filter(val => !pantalla.includes(val));
+    document.getElementById(pantalla).style.display ='flex';
+        for (let _pantalla of arrPantallas){
+            document.getElementById(_pantalla).style.display = 'none';
+        } 
+};
+
 // generar valor aleatorio atraves del boton
 
 /*
