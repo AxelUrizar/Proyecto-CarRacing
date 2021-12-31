@@ -10,6 +10,7 @@ class Pilot{
         this.velocidadActual = 0;
         this.metrosRealizados = 0;
         this.posicion = 'En salida';
+        this.pasarMeta = false;
     }
     recorrido(){
         this.metrosRealizados += this.velocidadActual;
@@ -26,18 +27,15 @@ class Pilot{
                 this.metrosRealizados -= metrosVuelta;
         } 
         if (this.vuelta >= vueltaMax) {
-            alert(this.nombre + ' a quedado en la posicion ' + this.posicion);
-            return this.finCarrera();
-            // return this;
+            this.pasarMeta = true;
+            this.velocidadActual = 'ACABADO';
+            this.metrosRealizados = 500;
+            return this;
         }
         return null;
 
     }
 
-    finCarrera(){
-        console.log(this);
-            return this;
-    }
 }
 
 class Circuito{
@@ -45,7 +43,7 @@ class Circuito{
         this.nombre = nombre;
         this.metrosVuelta = metrosVuelta;
         this.coches = coches;
-        // this.cochesFinalizados = [];
+        this.cochesFinalizados = [];
         this.vueltaMax = vueltaMax;
     }
 
@@ -73,22 +71,23 @@ class Circuito{
     start() {
         for (let i = 0; i < this.coches.length; i++) {
             this.coches[i].acelerar();
-            this.coches[i].pasarVuelta(this.metrosVuelta, this.vueltaMax);
-            // this.cochesFinalizados.push(this.coches[i].pasarVuelta(this.metrosVuelta, this.vueltaMax));
-            // console.log(this.coches[i].pasarVuelta(this.metrosVuelta, this.vueltaMax));
-            
+            let cocheFinalizado = this.coches[i].pasarVuelta(this.metrosVuelta, this.vueltaMax);
+            if (this.coches[i].pasarMeta) {
+                this.cochesFinalizados[i] = cocheFinalizado;
+                console.log(this.cochesFinalizados);
+            }
         }
         this.posicion();
         this.printarCarrera();
 
-        
-        // if (this.coches.length === this.cochesFinalizados.length){ 
-        //     this.cochesFinalizados = this.cochesFinalizados.filter(function (coche) { return coche != null;});
-        //     for (let i = 0; i < this.cochesFinalizados.length; i++) {
-        //         document.getElementById('finalizacion').textContent += '' + this.cochesFinalizados[i].nombre;       
-        //     }
-            
-        // }
+        this.finalizacionCarrera();
+    }
+    
+    finalizacionCarrera () {
+        if (this.cochesFinalizados.length === this.coches.length) {
+            console.log('CARRERA FINALIZADA');
+            document.getElementById('buttonCorrer').textContent = 'JUEGA DE NUEVO';
+        }
     }
 
     printarCarrera() {
