@@ -1,5 +1,5 @@
 - Pantallas :
-	- Press Start.
+	- Press Start. HECHO
 	- Elegir coches.
 	- Carrera.
 	- Resultado Carrera.
@@ -33,7 +33,7 @@ Funcionalidades:
 			- clasificacion() HECHO
 
 	- Estetica CSS.
-	- Cambiar de fase.
+	- Cambiar de fase. HECHO
 	- Equilibrar los coches pero que sean distintos rangos. HECHO
 	- Carrera:
 		Mostrar coches prop. HECHO
