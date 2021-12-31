@@ -2,6 +2,10 @@
     font-family: 'mario';
     src: url(../font/mario_kart_f2.ttf);}
 
+*{
+    font-family: mario;
+}
+
 h2 {
     font-family: mario;
     color: silver;
@@ -23,7 +27,6 @@ h2 {
 
 .pPantallas{
     font-size: 1em;
-    font-family: mario;
     padding: 0.3em 0.7em;
     border: solid 5px red;
     border-radius: 40px;
@@ -64,7 +67,11 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     transition: opacity 1s linear;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
+
 
 /* ---------------- Pantalla Carrera -------------------*/
 #pantallaCarrera {
@@ -94,7 +101,6 @@ h2 {
 .card{
    box-shadow: 5px 5px 5px black;
    background-color: red;
-   font-family: mario;
    font-size: 8px;
 }
 /* ---------------------boton correr--------------------  */
@@ -102,7 +108,6 @@ h2 {
     position: relative;
     background-color: red;
     border: solid 25px goldenrod;
-    font-family: 'mario';
     color: white;
     border-radius: 50%;
     width: 23%;
