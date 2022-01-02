@@ -1,6 +1,10 @@
 @font-face {
     font-family: 'mario';
-    src: url('/font/mario_kart_f2.ttf');
+    src: url(../font/mario_kart_f2.ttf);}
+
+*{
+    font-family: mario;
+    text-align: center;
 }
 
 h2 {
@@ -12,10 +16,73 @@ h2 {
     
 }
 
-/* ---------------- Pantalla carrera -------------------*/
-#pantallaCarrera {
+/*----------------- Default Pantallas ------------------*/
+
+.pantallas {
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pPantallas{
+    font-size: 1em;
+    padding: 0.3em 0.7em;
+    border: solid 5px red;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.774);
+    transition: 0.2s;
+}
+
+.pPantallas:hover {
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: 0.2s;
+}
+
+/* ---------------- Pantalla Inicio -------------------*/
+
+#pantallaInicio{
+    background-image:url(../img/fondoInicio2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+}
+
+#pantallaInicio p{
+    margin-bottom: 8%;
+}
+
+#pantallaInicio p:hover{
+    margin-bottom: 7.8%;
+}
+/* ---------------- Pantalla Personajes -------------------*/
+
+#pantallaPersonajes{
+    display: none;
+    background-image: url(../img/seleccionPersonajes.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 1s linear;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* ---------------- Pantalla Carrera -------------------*/
+#pantallaCarrera {
+    flex-direction: column;
+    display: none;
+    background-image: url(../img/seleccionPersonajes.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 #coches {
@@ -35,7 +102,6 @@ h2 {
 .card{
    box-shadow: 5px 5px 5px black;
    background-color: red;
-   font-family: mario;
    font-size: 8px;
 }
 /* ---------------------boton correr--------------------  */
@@ -43,10 +109,15 @@ h2 {
     position: relative;
     background-color: red;
     border: solid 25px goldenrod;
-    font-family: mario;
     color: white;
     border-radius: 50%;
     width: 23%;
     block-size: 200px;
     left: 400px;
+}
+
+/* ---------------- Pantalla Podio -------------------*/
+
+#pantallaPodio{
+    display: none;
 }
