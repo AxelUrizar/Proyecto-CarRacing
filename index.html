@@ -22,68 +22,76 @@
                 <h2>Seleccion de personaje</h2>
             </div>
             <div>
-                <p class='pPantallas' onclick="cambiarPantalla('pantallaCarrera')">Pulsa para avanzar</p>
+                <p class='pPantallas' onclick="cambiarPantalla('pantallaLoading')">Pulsa para avanzar</p>
             </div>
     </section>
 
+     <!-- Seccion para la pantalla Loading -->
+     <section class="pantallas" id="pantallaLoading">
+         <h1>Pantalla Loading</h1>
+        <div>
+            <p class='pPantallas' onclick="cambiarPantalla('pantallaCarrera')">Pulsa para avanzar</p>
+        </div>
+    </section>
 
 
     <!-- Seccion para la pantalla de carrera -->
     <section class="pantallas" id="pantallaCarrera">
         <h1>Let's race</h1>
         <div id="coches">
-            <h2>1</h2>
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="img/cochePrueba.png" alt="Card image cap">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item piloto">Piloto: </li>
-                    <li class="list-group-item velocidad">Velocidad: </li>
-                    <!-- <li class="list-group-item metrosRecorridos">Metros Recorridos:</li> -->
-                    <li class="list-group-item metrosParaVuelta">Metros para dar la vuelta:</li>
-                    <li class="list-group-item vuelta">Vuelta: </li>
-                    <!-- <li class="list-group-item posicion">Posicion:</li> -->
-                </ul>
-            </div>
-            <h2>2</h2>
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="img/cochePrueba.png" alt="Card image cap">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item piloto">Piloto: </li>
-                    <li class="list-group-item velocidad">Velocidad: </li>
-                    <!-- <li class="list-group-item metrosRecorridos">Metros Recorridos:</li> -->
-                    <li class="list-group-item metrosParaVuelta">Metros para dar la vuelta:</li>
-                    <li class="list-group-item vuelta">Vuelta: </li>
-                    <!-- <li class="list-group-item posicion">Posicion:</li> -->
-                </ul>
-            </div>
-            <h2>3</h2>
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="img/cochePrueba.png" alt="Card image cap">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item piloto">Piloto: </li>
-                    <li class="list-group-item velocidad">Velocidad: </li>
-                    <!-- <li class="list-group-item metrosRecorridos">Metros Recorridos:</li> -->
-                    <li class="list-group-item metrosParaVuelta">Metros para dar la vuelta:</li>
-                    <li class="list-group-item vuelta">Vuelta: </li>
-                    <!-- <li class="list-group-item posicion">Posicion:</li> -->
-                </ul>
-            </div>
-
-            <h2>4</h2>
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="img/cochePrueba.png" alt="Card image cap">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item piloto">Piloto: </li>
-                    <li class="list-group-item velocidad">Velocidad: </li>
-                    <!-- <li class="list-group-item metrosRecorridos">Metros Recorridos:</li> -->
-                    <li class="list-group-item metrosParaVuelta">Metros para dar la vuelta:</li>
-                    <li class="list-group-item vuelta">Vuelta: </li>
-                    <!-- <li class="list-group-item posicion">Posicion:</li> -->
-                </ul>
+            <div class='row'>
+               <div class="col-3">
+                   <h2>1</h2>
+                   <div class="card">
+                       <img class="card-img-top" src="img/cochePrueba.png" alt="Card image cap">
+                       <ul class="list-group list-group-flush">
+                           <li class="list-group-item piloto">Piloto: </li>
+                           <li class="list-group-item velocidad">Velocidad: </li>
+                           <li class="list-group-item metrosParaVuelta">Metros para dar la vuelta:</li>
+                           <li class="list-group-item vuelta">Vuelta: </li>
+                       </ul>
+                   </div>
+               </div>
+               <div class="col-3">
+                    <h2>2</h2>
+                    <div class="card">
+                        <img class="card-img-top" src="img/cochePrueba.png" alt="Card image cap">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item piloto">Piloto: </li>
+                            <li class="list-group-item velocidad">Velocidad: </li>
+                            <li class="list-group-item metrosParaVuelta">Metros para dar la vuelta:</li>
+                            <li class="list-group-item vuelta">Vuelta: </li>
+                        </ul>
+                    </div>
+               </div>
+               <div class="col-3">
+                    <h2>3</h2>
+                    <div class="card">
+                        <img class="card-img-top" src="img/cochePrueba.png" alt="Card image cap">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item piloto">Piloto: </li>
+                            <li class="list-group-item velocidad">Velocidad: </li>
+                            <li class="list-group-item metrosParaVuelta">Metros para dar la vuelta:</li>
+                            <li class="list-group-item vuelta">Vuelta: </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h2>4</h2>
+                    <div class="card">
+                        <img class="card-img-top" src="img/cochePrueba.png" alt="Card image cap">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item piloto">Piloto: </li>
+                            <li class="list-group-item velocidad">Velocidad: </li>
+                            <li class="list-group-item metrosParaVuelta">Metros para dar la vuelta:</li>
+                            <li class="list-group-item vuelta">Vuelta: </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
         </div> <br>
-        <button id='buttonCorrer'>¡¡Corre!!</button>
+        <button id='buttonCorrer'>Corre</button>
 
         <div id="finalizacion"></div>
     </section>

@@ -103,6 +103,7 @@ h2 {
    box-shadow: 5px 5px 5px black;
    background-color: red;
    font-size: 8px;
+   width: 18rem;
 }
 /* ---------------------boton correr--------------------  */
 #buttonCorrer{

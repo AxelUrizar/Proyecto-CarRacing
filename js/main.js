@@ -1,9 +1,7 @@
-//
-//-------------------------funcion para cambiar entre pantallas-----------------------------------
-//
+// ------------------------- Funcion para cambiar entre pantallas -----------------------------------
 
 const cambiarPantalla = (pantalla) => {
-    let arrPantallas = ['pantallaInicio', 'pantallaPersonajes', 'pantallaCarrera', 'pantallaPodio'];
+    let arrPantallas = ['pantallaInicio', 'pantallaPersonajes', 'pantallaLoading' ,'pantallaCarrera', 'pantallaPodio'];
     arrPantallas = arrPantallas.filter(val => !pantalla.includes(val));
     console.log(arrPantallas);
     document.getElementById(pantalla).style.display ='flex';
@@ -12,25 +10,10 @@ const cambiarPantalla = (pantalla) => {
         } 
 };
 
-// generar valor aleatorio atraves del boton
-
-/*
-    for (cochesArray) {
-        let newVel = coche.acelerar()
-        insertHTML newVel
-    }
-*/
-
-// document.getElementById('buttonCorrer').addEventListener('click', function(){
-//     let vel = document.getElementsByClassName('velocidad');
-//     for (let i = 0; i < vel.length; i++) {
-//         let rand = parseInt(Math.random() * (50 - 0) + 0);
-//         // console.log(rand);
-//         vel[i].textContent = 'Velocidad: ' + rand;
-//     }
-// })
-
+// ------------------------- Se printa los inicios de la carrera  -----------------------------------
 circuito1.printarCarrera();
+
+// ------------------------- Anyade un Listener al al boton de correr para que pase la ronda -----------------------------------
 document.getElementById('buttonCorrer').addEventListener('click', function () {
     circuito1.start();
 });

@@ -130,9 +130,8 @@ let allPlayers = {
     "7" : player7,
     "8" : player8
 }
+
 let participantes = [allPlayers[1], allPlayers[2], allPlayers[3], allPlayers[4]];
-// participantes[0].vuelta = 1;
-// participantes[2].vuelta = 3;
-// participantes[3].vuelta = 3;
+
 //Instancio circuitos
-let circuito1 = new Circuito("Reino Campinyon", 500, participantes, 1);
+let circuito1 = new Circuito("Reino Campinyon", 500, participantes, 3);
