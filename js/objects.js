@@ -70,6 +70,7 @@ class Circuito{
     }
 
     start() {
+        this.cochesFinalizados = [];
         for (let i = 0; i < this.coches.length; i++) {
             this.coches[i].acelerar();
             let cocheFinalizado = this.coches[i].pasarVuelta(this.metrosVuelta, this.vueltaMax);
@@ -112,7 +113,7 @@ class Circuito{
         let img = document.getElementsByClassName('imgPodio');
         let piloto = document.getElementsByClassName('pilotoPodio');
 
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < 3; i++) {
             piloto[i].innerHTML = 'Piloto: ' + this.cochesFinalizados[i].nombre;
             img[i].src = this.cochesFinalizados[i].img;
         }

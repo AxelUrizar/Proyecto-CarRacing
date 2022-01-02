@@ -1,6 +1,7 @@
 // ------------------------- Funcion para cambiar entre pantallas -----------------------------------
 
 const cambiarPantalla = (pantalla) => {
+
     let arrPantallas = ['pantallaInicio', 'pantallaPersonajes', 'pantallaLoading' ,'pantallaCarrera', 'pantallaPodio'];
     arrPantallas = arrPantallas.filter(val => !pantalla.includes(val));
     document.getElementById(pantalla).style.display ='flex';
