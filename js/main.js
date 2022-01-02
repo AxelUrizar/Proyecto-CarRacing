@@ -3,7 +3,6 @@
 const cambiarPantalla = (pantalla) => {
     let arrPantallas = ['pantallaInicio', 'pantallaPersonajes', 'pantallaLoading' ,'pantallaCarrera', 'pantallaPodio'];
     arrPantallas = arrPantallas.filter(val => !pantalla.includes(val));
-    console.log(arrPantallas);
     document.getElementById(pantalla).style.display ='flex';
         for (let _pantalla of arrPantallas){
             document.getElementById(_pantalla).style.display = 'none';
@@ -17,3 +16,4 @@ circuito1.printarCarrera();
 document.getElementById('buttonCorrer').addEventListener('click', function () {
     circuito1.start();
 });
+
