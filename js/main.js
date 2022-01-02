@@ -5,6 +5,7 @@
 const cambiarPantalla = (pantalla) => {
     let arrPantallas = ['pantallaInicio', 'pantallaPersonajes', 'pantallaCarrera', 'pantallaPodio'];
     arrPantallas = arrPantallas.filter(val => !pantalla.includes(val));
+    console.log(arrPantallas);
     document.getElementById(pantalla).style.display ='flex';
         for (let _pantalla of arrPantallas){
             document.getElementById(_pantalla).style.display = 'none';

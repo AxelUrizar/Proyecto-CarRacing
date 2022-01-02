@@ -1,7 +1,7 @@
 
 class Pilot{
 
-    constructor(nombre, velocidadMax, velocidadMin, peso){
+    constructor(nombre, velocidadMax, velocidadMin, peso, img){
         this.nombre = nombre;
         this.velocidadMax = velocidadMax;
         this.velocidadMin = velocidadMin;
@@ -11,6 +11,7 @@ class Pilot{
         this.metrosRealizados = 0;
         this.posicion = 'En salida';
         this.pasarMeta = false;
+        this.img = img;
     }
     recorrido(){
         this.metrosRealizados += this.velocidadActual;
@@ -93,31 +94,30 @@ class Circuito{
     printarCarrera() {
         let piloto = document.getElementsByClassName('piloto');
         let velocidad = document.getElementsByClassName('velocidad');
-        // let metrosRecorridos = document.getElementsByClassName('metrosRecorridos');
         let metrosParaVuelta = document.getElementsByClassName('metrosParaVuelta');
         let vuelta = document.getElementsByClassName('vuelta');
-        // let posicion = document.getElementsByClassName('posicion');
+        let img = document.getElementsByClassName('card-img-top');
+        console.log(img);
         for (let i = 0; i < this.coches.length; i++) {
             piloto[i].textContent = 'Piloto: ' + this.coches[i].nombre;
             velocidad[i].textContent = 'Velocidad: ' + this.coches[i].velocidadActual;
-            // metrosRecorridos[i].textContent = 'Metros Recorridos: ' + this.coches[i].metrosRealizados;
             metrosParaVuelta[i].textContent = 'Metros para dar la vuelta: \n' + (this.metrosVuelta - this.coches[i].metrosRealizados);
             vuelta[i].textContent = 'Vuelta: ' + this.coches[i].vuelta;
-            // posicion[i].textContent = 'Posicion: ' + this.coches[i].posicion;
+            img[i].src = this.coches[i].img;
         }
     }
 
 }
 
 //Instancio corredores
-let player1 = new Pilot("Mario",70,15, "intermedio");
-let player2 = new Pilot("Luigi",70,15, "intermedio");
-let player3 = new Pilot("Peach",80,10, "ligero");
-let player4 = new Pilot("Yoshi",80,10, "ligero");
-let player5 = new Pilot("Toad",90,5, "muy ligero");
-let player6 = new Pilot("Tortuga",90,5, "muy ligero");
-let player7 = new Pilot("Bowser",60,20,"pesado");
-let player8 = new Pilot("DK",60,20,"pesado");
+let player1 = new Pilot("Mario",70,15, "intermedio", '../img/corredores/mario.png');
+let player2 = new Pilot("Luigi",70,15, "intermedio", '../img/corredores/luigi.png');
+let player3 = new Pilot("Peach",80,10, "ligero", '../img/corredores/peach.png');
+let player4 = new Pilot("Yoshi",80,10, "ligero", '../img/corredores/yoshi.png');
+let player5 = new Pilot("Toad",90,5, "muy ligero", '../img/corredores/toad.png');
+let player6 = new Pilot("Tortuga",90,5, "muy ligero", '../img/corredores/koopa.png');
+let player7 = new Pilot("Bowser",60,20,"pesado", '../img/corredores/bowser.png');
+let player8 = new Pilot("DK",60,20,"pesado", '../img/corredores/dk.png');
 
 
 let allPlayers = {
