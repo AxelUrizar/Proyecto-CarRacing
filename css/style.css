@@ -63,7 +63,7 @@ h2 {
 
 #pantallaPersonajes{
     display: none;
-    background-image: url(../img/seleccionPersonajes.gif);
+    background-image: url(../img/seleccionPersonajes.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,7 +89,9 @@ h2 {
 #pantallaCarrera {
     flex-direction: column;
     display: none;
+
     background-image: url(../img/photo_2022-01-02_12-25-49.jpg);
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -132,4 +134,20 @@ h2 {
 
 #pantallaPodio{
     display: none;
+    background-image: url(../img/confetti.gif);
+}
+
+#numOro {
+    color: gold;
+    font-weight: bold;
+}
+
+#numPlata {
+    font-weight: bold;
+    color: silver;
+}
+
+#numBronce {
+    font-weight: bold;
+    color: orange;
 }
