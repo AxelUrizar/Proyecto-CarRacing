@@ -70,12 +70,12 @@ class Circuito{
     }
 
     start() {
+        this.cochesFinalizados = [];
         for (let i = 0; i < this.coches.length; i++) {
             this.coches[i].acelerar();
             let cocheFinalizado = this.coches[i].pasarVuelta(this.metrosVuelta, this.vueltaMax);
             if (this.coches[i].pasarMeta) {
                 this.cochesFinalizados[i] = cocheFinalizado;
-                console.log(this.cochesFinalizados);
             }
         }
         this.posicion();
@@ -87,7 +87,9 @@ class Circuito{
     finalizacionCarrera () {
         if (this.cochesFinalizados.length === this.coches.length) {
             console.log('CARRERA FINALIZADA');
-            document.getElementById('buttonCorrer').textContent = 'JUEGA DE NUEVO';
+            console.log(this.cochesFinalizados);
+            cambiarPantalla('pantallaPodio');
+            this.pintaPodio();
         }
     }
 
@@ -97,7 +99,6 @@ class Circuito{
         let metrosParaVuelta = document.getElementsByClassName('metrosParaVuelta');
         let vuelta = document.getElementsByClassName('vuelta');
         let img = document.getElementsByClassName('card-img-top');
-        console.log(img);
         for (let i = 0; i < this.coches.length; i++) {
             piloto[i].textContent = 'Piloto: ' + this.coches[i].nombre;
             velocidad[i].textContent = 'Velocidad: ' + this.coches[i].velocidadActual;
@@ -106,8 +107,20 @@ class Circuito{
             img[i].src = this.coches[i].img;
         }
     }
-}
+    // ------------------------- Funcion printar el podio -----------------------------------
+    pintaPodio ()  {
+        let img = document.getElementsByClassName('imgPodio');
+        let piloto = document.getElementsByClassName('pilotoPodio');
 
+        for (let i = 0; i < 3; i++) {
+            piloto[i].innerHTML = 'Piloto: ' + this.cochesFinalizados[i].nombre;
+            img[i].src = this.cochesFinalizados[i].img;
+        }
+
+
+    }
+
+}
 
 
 //Instancio corredores
@@ -135,4 +148,4 @@ let allPlayers = {
 let participantes = [allPlayers[1], allPlayers[2], allPlayers[3], allPlayers[4]];
 
 //Instancio circuitos
-let circuito1 = new Circuito("Reino Campinyon", 500, participantes, 3);
+let circuito1 = new Circuito("Reino Campinyon", 500, participantes, 1);
