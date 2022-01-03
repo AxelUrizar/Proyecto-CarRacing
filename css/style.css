@@ -121,4 +121,20 @@ h2 {
 
 #pantallaPodio{
     display: none;
+    background-image: url(../img/confetti.gif);
+}
+
+#numOro {
+    color: gold;
+    font-weight: bold;
+}
+
+#numPlata {
+    font-weight: bold;
+    color: silver;
+}
+
+#numBronce {
+    font-weight: bold;
+    color: orange;
 }
