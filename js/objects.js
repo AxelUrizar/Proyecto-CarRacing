@@ -107,7 +107,6 @@ class Circuito{
             img[i].src = this.coches[i].img;
         }
     }
-
     // ------------------------- Funcion printar el podio -----------------------------------
     pintaPodio ()  {
         let img = document.getElementsByClassName('imgPodio');
