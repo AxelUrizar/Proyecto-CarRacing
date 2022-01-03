@@ -106,8 +106,9 @@ class Circuito{
             img[i].src = this.coches[i].img;
         }
     }
-
 }
+
+
 
 //Instancio corredores
 let player1 = new Pilot("Mario",70,15, "intermedio", '../img/corredores/mario.png');
