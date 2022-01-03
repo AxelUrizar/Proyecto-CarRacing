@@ -15,7 +15,7 @@
     <section class="pantallas" id="pantallaInicio">
         <p class='pPantallas' onclick="cambiarPantalla('pantallaPersonajes')">Pulsa para comenzar</p>
     </section>
-
+    
     <!-- Seccion para la pantalla de Personajes -->
     <section class="pantallas" id="pantallaPersonajes">
             <div>
@@ -89,17 +89,68 @@
                     </div>
                 </div>
             </div>
-
-        </div> <br>
+        </div> 
+        <br>
         <button id='buttonCorrer'>Corre</button>
 
         <div id="finalizacion"></div>
     </section>
 
-
-
     <section class="pantallas" id="pantallaPodio">
+        <br><br>
+        <div class="container contPodio">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Podio</h1>
+                </div>
+            </div>
+                <div class='row'>
+                    <h2 id='numOro'>1</h2>
+                    <div class="col-12 d-flex justify-content-center">
+                       <div class="card">
+                           <img class="card-img-top imgPodio" src="img/cochePrueba.png" alt="Card image cap">
+                           <ul class="list-group list-group-flush">
+                               <li class="list-group-item piloto pilotoPodio">Piloto: </li>
+                           </ul>
+                       </div>
+                    </div>
+                </div>
+                <br>
+                
+                <div class="row">
+                    <div class="col d-flex flex-column justify-content-center align-items-center">
+                        <h2 id='numPlata'>2</h2>
+                            <div class="col d-flex justify-content-center">
+                                <div class="card">
+                                    <img class="card-img-top imgPodio" src="img/cochePrueba.png" alt="Card image cap">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item piloto pilotoPodio">Piloto: </li>
+                                    </ul>
+  
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col">
+                            <h2 id='numBronce'>3</h2>
+                            <div class="col d-flex justify-content-center">
+                                <div class="card">
+                                    <img class="card-img-top imgPodio" src="img/cochePrueba.png" alt="Card image cap">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item piloto pilotoPodio">Piloto: </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                </div>    
+                <br>
+                <div class='row'>
+                    <div class="col">
+                        <p class='pPantallas' onclick="location.reload()">Volver a jugar</p>
+                    </div>
+                </div>
+            </div>
 
+        </div>
     </section>
 
     <script src="js/objects.js"></script>
