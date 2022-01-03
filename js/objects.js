@@ -94,11 +94,11 @@ class Circuito{
     }
 
     printarCarrera() {
-        let piloto = document.getElementsByClassName('piloto');
+        let piloto = document.getElementsByClassName('pilotoCarrera');
         let velocidad = document.getElementsByClassName('velocidad');
         let metrosParaVuelta = document.getElementsByClassName('metrosParaVuelta');
         let vuelta = document.getElementsByClassName('vuelta');
-        let img = document.getElementsByClassName('card-img-top');
+        let img = document.getElementsByClassName('imgCarrera');
         for (let i = 0; i < this.coches.length; i++) {
             piloto[i].textContent = 'Piloto: ' + this.coches[i].nombre;
             velocidad[i].textContent = 'Velocidad: ' + this.coches[i].velocidadActual;
