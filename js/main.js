@@ -17,3 +17,6 @@ circuito1.printarCarrera();
 document.getElementById('buttonCorrer').addEventListener('click', function () {
     circuito1.start();
 });
+//setTimeout(() => {
+//    cambiarPantalla("pantallaCarrera");
+//}, 5000);

@@ -73,12 +73,23 @@ h2 {
     justify-content: space-around;
 }
 
+/*----------------- Pantalla Carga --------------------*/
+
+#pantallaLoading{
+    background-image: url(../img/photo_2022-01-02_12-25-49.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: none;
+}
+
+
 
 /* ---------------- Pantalla Carrera -------------------*/
 #pantallaCarrera {
     flex-direction: column;
     display: none;
-    background-image: url(../img/seleccionPersonajes.gif);
+    background-image: url(../img/photo_2022-01-02_12-25-49.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -112,9 +123,9 @@ h2 {
     border: solid 25px goldenrod;
     color: white;
     border-radius: 50%;
-    width: 23%;
-    block-size: 200px;
-    left: 400px;
+    width: 20em;
+    height: 20em;
+    block-size: 100px;
 }
 
 /* ---------------- Pantalla Podio -------------------*/
