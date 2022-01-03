@@ -121,8 +121,16 @@ h2 {
 
 #pantallaPodio{
     display: none;
-    background-image: url(../img/confetti.gif);
-    
+    position: relative;
+    z-index: 1;
+}
+
+#pantallaPodio::after{
+    inset: 0;
+    content: '';
+    position: absolute;
+    z-index: 10;
+    background-image: url(../img/confetti2.gif);
 }
 
 #numOro {
