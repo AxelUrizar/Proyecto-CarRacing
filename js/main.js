@@ -8,6 +8,7 @@ const cambiarPantalla = (pantalla) => {
         for (let _pantalla of arrPantallas){
             document.getElementById(_pantalla).style.display = 'none';
         } 
+        seleccionPersonaje(allPlayers);
 };
 
 // ------------------------- Se printa los inicios de la carrera  -----------------------------------

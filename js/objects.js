@@ -1,4 +1,3 @@
-
 class Pilot{
 
     constructor(nombre, velocidadMax, velocidadMin, peso, img){
@@ -82,6 +81,7 @@ class Circuito{
         this.printarCarrera();
 
         this.finalizacionCarrera();
+        
     }
     
     finalizacionCarrera () {
@@ -143,7 +143,22 @@ let allPlayers = {
     "6" : player6,
     "7" : player7,
     "8" : player8
+};
+
+let seleccionPersonaje = (allPlayers) => {
+    let  imgSeleccion = document.getElementsByClassName('imgSeleccion');
+    let  pilotoSeleccion = document.getElementsByClassName('pilotoSeleccion');
+
+    for (const i in allPlayers) {
+        console.log(i)
+        imgSeleccion[i-1].src = allPlayers[i].img; 
+        console.log(allPlayers[i].img) 
+        pilotoSeleccion[i-1].innerHTML = 'Piloto: ' + allPlayers[i].nombre;
+    }
 }
+
+
+
 
 let participantes = [allPlayers[1], allPlayers[2], allPlayers[3], allPlayers[4]];
 
