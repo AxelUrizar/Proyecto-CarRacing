@@ -1,3 +1,6 @@
+
+
+
 // ------------------------- Funcion para cambiar entre pantallas -----------------------------------
 
 const cambiarPantalla = (pantalla) => {
@@ -8,7 +11,23 @@ const cambiarPantalla = (pantalla) => {
         for (let _pantalla of arrPantallas){
             document.getElementById(_pantalla).style.display = 'none';
         } 
+        printarSeleccionPersonaje(allPlayers);
 };
+
+// ------------------------- Funcion para printar la pantalla de Seleccion -----------------------------------
+
+const printarSeleccionPersonaje = (allPlayers) => {
+    let  imgSeleccion = document.getElementsByClassName('imgSeleccion');
+    let  pilotoSeleccion = document.getElementsByClassName('pilotoSeleccion');
+
+    for (const i in allPlayers) {
+        console.log(i)
+        imgSeleccion[i-1].src = allPlayers[i].img; 
+        console.log(allPlayers[i].img) 
+        pilotoSeleccion[i-1].innerHTML = allPlayers[i].nombre;
+    }
+}
+
 
 // ------------------------- Se printa los inicios de la carrera  -----------------------------------
 circuito1.printarCarrera();
