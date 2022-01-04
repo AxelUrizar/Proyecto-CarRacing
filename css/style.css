@@ -83,7 +83,44 @@ h2 {
     display: none;
 }
 
+.cargap1{
+    position: relative;
+    bottom: 10em;
+    right: 30em;
+    
+}
 
+.cargap2{
+    position: relative;
+    right: 25em;
+}
+
+.cargap3{
+    position: relative;
+    bottom: 10em;
+    right: 20em;
+}
+
+.cargap4{
+    position: relative;
+    right: 15em;
+}
+
+.loading{
+    position: relative;
+    color: darkred;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.527);
+    font-style: oblique;
+    top: 7em;
+    left: 1em;
+}
+
+.preload{
+    position: relative;
+    width: 5em;
+    top: 17.5em;
+    left: 4em;
+}
 
 /* ---------------- Pantalla Carrera -------------------*/
 #pantallaCarrera {
