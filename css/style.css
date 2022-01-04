@@ -40,7 +40,14 @@ h2 {
     font-size: 1.1em;
     transition: 0.2s;
 }
+/* ---------------------Default Tarjetas--------------------  */
 
+.card{
+    box-shadow: 5px 5px 5px black;
+    background-color: red;
+    font-size: 8px;
+    width: 18rem;
+ }
 /* ---------------- Pantalla Inicio -------------------*/
 
 #pantallaInicio{
@@ -67,12 +74,35 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: opacity 1s linear;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
     justify-content: space-around;
 }
 
+#pantallaPersonajes{
+    margin: 0 auto;
+}
+
+#rooster{
+    margin-bottom: 8em;
+}
+
+#pantallaPersonajes .card {
+    width: 25em;
+    transition: 0.2s;
+}
+
+#pantallaPersonajes .card:hover {
+    width: 23em;
+    cursor: pointer;
+    transition: 0.2s;
+    background: rgb(69, 69, 207);
+}
+
+.personajeSeleccionado {
+    background: rgb(69, 69, 207);
+    width: 23em!important;
+}
 /*----------------- Pantalla Carga --------------------*/
 
 #pantallaLoading{
@@ -145,14 +175,7 @@ h2 {
     justify-content: space-between;
 
 }
-/* ---------------------Tarjetas--------------------  */
 
-.card{
-   box-shadow: 5px 5px 5px black;
-   background-color: red;
-   font-size: 8px;
-   width: 18rem;
-}
 /* ---------------------boton correr--------------------  */
 #buttonCorrer{
     position: relative;

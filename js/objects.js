@@ -1,3 +1,6 @@
+let participantes = [];
+let personajeSeleccionado = [];
+let corredoresRivales = [];
 
 class Pilot{
 
@@ -82,6 +85,7 @@ class Circuito{
         this.printarCarrera();
 
         this.finalizacionCarrera();
+        
     }
     
     finalizacionCarrera () {
@@ -122,6 +126,34 @@ class Circuito{
 
 }
 
+// ------------------------- Funcion para seleccionar corredores -----------------------------------
+
+const seleccionarCorredor = (corredorSeleccionado) =>{
+    if (corredoresRivales.length < 3) {
+        if (personajeSeleccionado.length < 1) {
+            personajeSeleccionado.push(allPlayers[corredorSeleccionado]);
+            participantes.push(allPlayers[corredorSeleccionado]);
+
+        } else {
+            corredoresRivales.push(allPlayers[corredorSeleccionado]);
+            participantes.push(allPlayers[corredorSeleccionado]);
+
+            if (corredoresRivales.length == 3) {
+                cambiarPantalla('pantallaLoading');
+
+                setTimeout (() => {
+                    cambiarPantalla('pantallaCarrera');
+                }, 5000);
+
+                circuito1.printarCarrera();
+            }
+        }
+
+        document.getElementById(corredorSeleccionado).onclick = "";
+        document.getElementById(corredorSeleccionado).className = "card personajeSeleccionado";
+    }
+}
+
 
 //Instancio corredores
 let player1 = new Pilot("Mario",70,15, "intermedio", '../img/corredores/mario.png');
@@ -143,9 +175,7 @@ let allPlayers = {
     "6" : player6,
     "7" : player7,
     "8" : player8
-}
-
-let participantes = [allPlayers[1], allPlayers[2], allPlayers[3], allPlayers[4]];
+};
 
 //Instancio circuitos
 let circuito1 = new Circuito("Reino Campinyon", 500, participantes, 1);
