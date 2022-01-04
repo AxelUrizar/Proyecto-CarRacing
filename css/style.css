@@ -170,9 +170,10 @@ h2 {
 #pantallaPodio{
     display: none;
     background-image: url(../img/photo_2022-01-02_12-25-49.jpg);
-     background-position: center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: auto;
 }
 
 .contPodio {
