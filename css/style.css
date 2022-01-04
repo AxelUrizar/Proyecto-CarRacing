@@ -115,16 +115,10 @@ h2 {
     left: 1em;
 }
 
-.boton{
-    position: relative;
-    left: 49em;
-    top: 17em
-}
-
 .preload{
     position: relative;
     width: 5em;
-    top: 17em;
+    top: 17.5em;
     left: 4em;
 }
 
