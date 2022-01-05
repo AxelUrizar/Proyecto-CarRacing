@@ -172,7 +172,6 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 #coches {
@@ -231,8 +230,15 @@ h2 {
     color: orange;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 1446px) {
     #pantallaPodio {
+        height: auto;
+    }
+}
+
+@media (max-width: 991px) {
+    #pantallaCarrera {
         height: auto;
     }
 }
