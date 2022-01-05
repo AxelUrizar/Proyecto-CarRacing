@@ -21,9 +21,7 @@ const printarSeleccionPersonaje = (allPlayers) => {
     let  pilotoSeleccion = document.getElementsByClassName('pilotoSeleccion');
 
     for (const i in allPlayers) {
-        console.log(i)
         imgSeleccion[i-1].src = allPlayers[i].img; 
-        console.log(allPlayers[i].img) 
         pilotoSeleccion[i-1].innerHTML = allPlayers[i].nombre;
     }
 }

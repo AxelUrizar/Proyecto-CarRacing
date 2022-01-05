@@ -105,9 +105,9 @@ class Circuito{
         let img = document.getElementsByClassName('imgCarrera');
         for (let i = 0; i < this.coches.length; i++) {
             piloto[i].textContent = 'Piloto: ' + this.coches[i].nombre;
-            velocidad[i].textContent = 'Velocidad: ' + this.coches[i].velocidadActual;
-            metrosParaVuelta[i].textContent = 'Metros para dar la vuelta: \n' + (this.metrosVuelta - this.coches[i].metrosRealizados);
-            vuelta[i].textContent = 'Vuelta: ' + this.coches[i].vuelta;
+            velocidad[i].innerHTML = 'Velocidad: ' + '<span class="marioNumeros">' + this.coches[i].velocidadActual + '</span>';
+            metrosParaVuelta[i].innerHTML = 'Metros para dar la vuelta: \n' + '<span class="marioNumeros">' + (this.metrosVuelta - this.coches[i].metrosRealizados) + '</span>';
+            vuelta[i].innerHTML = 'Vuelta: ' + '<span class="marioNumeros">' + this.coches[i].vuelta + '</span>';
             img[i].src = this.coches[i].img;
         }
     }
@@ -117,7 +117,7 @@ class Circuito{
         let piloto = document.getElementsByClassName('pilotoPodio');
 
         for (let i = 0; i < 3; i++) {
-            piloto[i].innerHTML = 'Piloto: ' + this.cochesFinalizados[i].nombre;
+            piloto[i].innerHTML = this.cochesFinalizados[i].nombre;
             img[i].src = this.cochesFinalizados[i].img;
         }
 
@@ -143,7 +143,7 @@ const seleccionarCorredor = (corredorSeleccionado) =>{
 
                 setTimeout (() => {
                     cambiarPantalla('pantallaCarrera');
-                }, 5000);
+                }, 3000);
 
                 circuito1.printarCarrera();
             }
