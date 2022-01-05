@@ -140,13 +140,7 @@ const seleccionarCorredor = (corredorSeleccionado) =>{
             participantes.push(allPlayers[corredorSeleccionado]);
 
             if (corredoresRivales.length == 3) {
-                cambiarPantalla('pantallaLoading');
                 printLoading();
-                setTimeout (() => {
-                    cambiarPantalla('pantallaCarrera');
-                }, 3000);
-
-                circuito1.printarCarrera();
             }
         }
 
@@ -155,17 +149,25 @@ const seleccionarCorredor = (corredorSeleccionado) =>{
     }
 }
 
-//corredore seleccionados pantalla loading
+//corredores seleccionados pantalla loading
 
 const printLoading = () =>{
     for (let i = 0; i < participantes.length; i++) {
-        document.getElementsByClassName(cargap).src = participantes[i].gif
+        let img = document.getElementsByClassName('cargap')
+        cambiarPantalla('pantallaLoading');
+        img[i].src = participantes[i].gif;
+
+                // setTimeout (() => {
+                //     cambiarPantalla('pantallaCarrera');
+                // }, 3000);
+
+                circuito1.printarCarrera();
         
     }
 }
 
 
-//Instancio corredores
+//Instancia corredores
 let player1 = new Pilot("Mario",70,15, "intermedio", '../img/corredores/mario.png', '../img/corredores/mario.gif');
 let player2 = new Pilot("Luigi",70,15, "intermedio", '../img/corredores/luigi.png', '../img/corredores/luigi.gif');
 let player3 = new Pilot("Peach",80,10, "ligero", '../img/corredores/peach.png', '../img/corredores/Peach.gif');
