@@ -90,7 +90,7 @@ class Circuito{
     }
     
     finalizacionCarrera () {
-        if (this.cochesFinalizados.length === this.coches.length-1) {
+        if (this.cochesFinalizados.length >= this.coches.length-1) {
             console.log('CARRERA FINALIZADA');
             console.log(this.cochesFinalizados);
             cambiarPantalla('pantallaPodio');
@@ -157,9 +157,9 @@ const printLoading = () =>{
         cambiarPantalla('pantallaLoading');
         img[i].src = participantes[i].gif;
 
-                // setTimeout (() => {
-                //     cambiarPantalla('pantallaCarrera');
-                // }, 3000);
+                setTimeout (() => {
+                    cambiarPantalla('pantallaCarrera');
+                }, 3000);
 
                 circuito1.printarCarrera();
         
