@@ -13,7 +13,7 @@
     font-size: 1.1em;
 }
 
-h2 {
+h3 {
     font-family: mario;
     color: silver;
     font-size: 40px;
@@ -172,7 +172,22 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
+
+#pantallaCarrera .card{
+    width: 30em;
+}
+
+    #pantallaCarrera .vuelta, 
+    #pantallaCarrera .velocidad{
+        padding: 0;
+        padding-bottom: 0.3em;  
+    }
+
+    #pantallaCarrera .metrosParaVuelta{
+        padding-bottom: 0.2em;
+    }
 
 #coches {
     display: flex;
@@ -189,14 +204,7 @@ h2 {
 
 /* ---------------------boton correr--------------------  */
 #buttonCorrer{
-    position: relative;
-    background-color: red;
-    border: solid 25px goldenrod;
-    color: white;
-    border-radius: 50%;
-    width: 20em;
-    height: 20em;
-    block-size: 100px;
+    width: 5em;
 }
 
 /* ---------------- Pantalla Podio -------------------*/
@@ -230,15 +238,8 @@ h2 {
     color: orange;
 }
 
-
-@media (max-width: 1446px) {
+@media (max-width: 768px) {
     #pantallaPodio {
-        height: auto;
-    }
-}
-
-@media (max-width: 991px) {
-    #pantallaCarrera {
         height: auto;
     }
 }
