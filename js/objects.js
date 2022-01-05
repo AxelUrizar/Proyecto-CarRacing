@@ -89,7 +89,7 @@ class Circuito{
     }
     
     finalizacionCarrera () {
-        if (this.cochesFinalizados.length === this.coches.length) {
+        if (this.cochesFinalizados.length === this.coches.length-1) {
             console.log('CARRERA FINALIZADA');
             console.log(this.cochesFinalizados);
             cambiarPantalla('pantallaPodio');
