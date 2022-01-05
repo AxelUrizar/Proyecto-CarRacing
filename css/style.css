@@ -10,15 +10,21 @@
 *{
     font-family: mario;
     text-align: center;
+    font-size: 1.1em;
 }
 
-h2 {
+h3 {
     font-family: mario;
     color: silver;
     font-size: 40px;
     font-style: oblique;
     text-shadow: 2px 2px 2px gray;
     
+}
+
+.marioNumeros {
+    font-family: marioNumeros;
+    font-size: 2em;
 }
 
 /*----------------- Default Pantallas ------------------*/
@@ -45,6 +51,7 @@ h2 {
     font-size: 1.1em;
     transition: 0.2s;
 }
+
 /* ---------------------Default Tarjetas--------------------  */
 
 .card{
@@ -168,6 +175,20 @@ h2 {
 
 }
 
+#pantallaCarrera .card{
+    width: 30em;
+}
+
+    #pantallaCarrera .vuelta, 
+    #pantallaCarrera .velocidad{
+        padding: 0;
+        padding-bottom: 0.3em;  
+    }
+
+    #pantallaCarrera .metrosParaVuelta{
+        padding-bottom: 0.2em;
+    }
+
 #coches {
     display: flex;
     justify-content: center;
@@ -183,14 +204,7 @@ h2 {
 
 /* ---------------------boton correr--------------------  */
 #buttonCorrer{
-    position: relative;
-    background-color: red;
-    border: solid 25px goldenrod;
-    color: white;
-    border-radius: 50%;
-    width: 20em;
-    height: 20em;
-    block-size: 100px;
+    width: 5em;
 }
 
 /* ---------------- Pantalla Podio -------------------*/
