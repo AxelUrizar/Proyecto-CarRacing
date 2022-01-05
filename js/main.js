@@ -1,4 +1,8 @@
-
+let music = new Audio('/music/kart-mario.mp3');
+music.play();
+music.loop = true;
+music.volume = 0.1;
+music.playbackRate = 1;
 
 
 // ------------------------- Funcion para cambiar entre pantallas -----------------------------------
