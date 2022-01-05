@@ -201,8 +201,9 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: auto;
 }
+
+
 
 .contPodio {
     background-image: url(../img/confetti.gif);
@@ -221,4 +222,10 @@ h2 {
 #numBronce {
     font-weight: bold;
     color: orange;
+}
+
+@media (max-width: 768px) {
+    #pantallaPodio {
+        height: auto;
+    }
 }
