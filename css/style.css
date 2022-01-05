@@ -10,6 +10,7 @@
 *{
     font-family: mario;
     text-align: center;
+    font-size: 1.1em;
 }
 
 h2 {
@@ -19,6 +20,11 @@ h2 {
     font-style: oblique;
     text-shadow: 2px 2px 2px gray;
     
+}
+
+.marioNumeros {
+    font-family: marioNumeros;
+    font-size: 2em;
 }
 
 /*----------------- Default Pantallas ------------------*/
@@ -45,6 +51,7 @@ h2 {
     font-size: 1.1em;
     transition: 0.2s;
 }
+
 /* ---------------------Default Tarjetas--------------------  */
 
 .card{
