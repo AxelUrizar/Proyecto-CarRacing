@@ -188,11 +188,36 @@ h2 {
 
 }
 
-/* ---------------------boton correr--------------------  */
-#buttonCorrer{
-    width: 5em;
+        /* ---------------------boton correr--------------------  */
+
+.cajaButtonCorrer{
+    width: 8em;
+    height: 8em;
+    margin-bottom: 1%;
 }
 
+.buttonCorrer{
+    width: 7em;
+    height: 7em;
+    background-image: url(../img/rueda.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+    .buttonCorrer p{
+        color: red;
+        -webkit-text-stroke: 2px rgb(255, 255, 255);
+        font-size: 1.6em;
+        user-select: none;
+    }
+
+.buttonCorrer:active{
+    transition: 0.2s;
+    font-size: 1.2em;
+}
 /* ---------------- Pantalla Podio -------------------*/
 
 #pantallaPodio{
