@@ -2,6 +2,11 @@
     font-family: 'mario';
     src: url(../font/mario_kart_f2.ttf);}
 
+@font-face {
+    font-family: 'marioNumeros';
+    src: url(../font/mario-kart-position-font-regular.otf);
+}
+
 *{
     font-family: mario;
     text-align: center;
