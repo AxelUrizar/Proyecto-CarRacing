@@ -31,6 +31,10 @@ h2 {
     font-size: 2em;
 }
 
+.row{
+    --bs-gutter-x: 0;
+}
+
 /*----------------- Default Pantallas ------------------*/
 
 .pantallas {
@@ -149,6 +153,8 @@ h2 {
 
 .cajaCoches{
     height: 80%;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .cajaLoadingPuntos{
@@ -175,6 +181,16 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
 
+}
+
+.letsRace{
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2px red;
+    font-size: 1.6em;
+}
+
+#pantallaCarrera .row{
+    --bs-gutter-x: 1.5rem;
 }
 
 #pantallaCarrera .card{
@@ -243,7 +259,9 @@ h2 {
     background-size: cover;
 }
 
-
+#pantallaPodio .row{
+    --bs-gutter-x: 1.5rem;
+}
 
 .contPodio {
     background-image: url(../img/confetti.gif);
@@ -300,6 +318,56 @@ h2 {
         transition: 0.2s;
     }
 
+@media (max-width: 992px) /*and (min-width: 577px)*/{
+   
+    .pantallas {
+        width: 100%;
+        height: 100%;
+    }
+    
+    #pantallaPersonajes{
+        background-image: url(../img/fondoMovil.jpg);
+        background-position: center;
+    }
+
+    /* #tituloCarrera{
+        height: 30%;
+    } */
+
+    #coches{
+        width: 90%;
+        /* height: 70%; */
+    }
+
+        #coches .card{
+            width: 90%;
+        }
+        
+
+    #pantallaPodio{
+        height: 100vh;
+    }
+
+    .loadingAbajo{
+        margin-top: 2em;
+    }
+
+    .cajaLoadingPuntos{
+        margin: 0 auto!important;
+    }
+
+    
+}
+
+@media (max-width: 767px) {
+    
+    #coches .card li{
+        font-size: 0.8em;
+    } 
+
+    
+}
+
 @media (max-width: 576px) {
 
     #pantallaPersonajes > div{
@@ -310,6 +378,21 @@ h2 {
     #pantallaPersonajes h2{
         font-size: 1em;
     }
+    
+    
+
+    #pantallaPodio{
+        height: 100%;
+    }
+
+    .contPodio{
+        height: 100%;
+    }
+
+    #pantallaLoading{
+        height: 100%;
+        font-size: 1em;
+    }
 
     #pantallaLoading img{
         width: 5em;
@@ -318,37 +401,11 @@ h2 {
         .pilotosLoading{
             width: 50%;
         }
-    
-    #pantallaPodio {
-        height: auto;
+
+    #pantallaLoading .loading{
+        font-size: 1em;
     }
-}
-
-@media (max-width: 767px) {
-    
-    .pantallas {
-        width: 100%;
-        height: 100%;
+    #pantallaLoading .preload{
+        width: 3em;
     }
-
-    #pantallaPersonajes{
-        background-image: url(../img/fondoMovil.jpg);
-        background-position: center;
-        
-    }
-}
-
-@media (max-width: 992px) /*and (min-width: 577px)*/{
-   
-    
-
-    
-    .loadingAbajo{
-        margin-top: 2em;
-    }
-
-    .cajaLoadingPuntos{
-        margin: 0 auto!important;
-    }
-
 }
