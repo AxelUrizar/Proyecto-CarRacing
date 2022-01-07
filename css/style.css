@@ -312,11 +312,11 @@ h2 {
     margin-bottom: 0;
 }
 
-    .volverButton:hover {
-        cursor: pointer;
-        font-size: 0.6em;
-        transition: 0.2s;
-    }
+.volverButton:hover {
+    cursor: pointer;
+    font-size: 0.6em;
+    transition: 0.2s;
+}
 
 @media (max-width: 992px) /*and (min-width: 577px)*/{
    
@@ -330,19 +330,13 @@ h2 {
         background-position: center;
     }
 
-    /* #tituloCarrera{
-        height: 30%;
-    } */
-
     #coches{
         width: 90%;
-        /* height: 70%; */
     }
 
-        #coches .card{
-            width: 90%;
-        }
-        
+    #coches .card{
+        width: 90%;
+    }    
 
     #pantallaPodio{
         height: 100vh;
@@ -355,17 +349,17 @@ h2 {
     .cajaLoadingPuntos{
         margin: 0 auto!important;
     }
-
     
+    .cajaButtonCorrer {
+        margin-top: 3em;
+    }
 }
 
 @media (max-width: 767px) {
     
     #coches .card li{
         font-size: 0.8em;
-    } 
-
-    
+    }     
 }
 
 @media (max-width: 576px) {
@@ -377,9 +371,7 @@ h2 {
 
     #pantallaPersonajes h2{
         font-size: 1em;
-    }
-    
-    
+    }  
 
     #pantallaPodio{
         height: 100%;
@@ -398,13 +390,14 @@ h2 {
         width: 5em;
     }
 
-        .pilotosLoading{
-            width: 50%;
-        }
+    .pilotosLoading{
+        width: 50%;
+    }
 
     #pantallaLoading .loading{
         font-size: 1em;
     }
+
     #pantallaLoading .preload{
         width: 3em;
     }
