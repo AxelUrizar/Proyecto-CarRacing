@@ -1,11 +1,13 @@
-let music = new Audio('/music/MainMenu.mp3');
-music.play();
-music.loop = true;
-music.volume = 0.1;
-music.playbackRate = 1;
+// ------------------------- Poner musica al juego ----------------------------------- //
+
+// let music = new Audio('/music/kart-mario.mp3');
+// music.play();
+// music.loop = true;
+// music.volume = 0.1;
+// music.playbackRate = 1;
 
 
-// ------------------------- Funcion para cambiar entre pantallas -----------------------------------
+// ------------------------- Funcion para cambiar entre pantallas ----------------------------------- //
 
 const cambiarPantalla = (pantalla) => {
 
@@ -18,7 +20,7 @@ const cambiarPantalla = (pantalla) => {
         printarSeleccionPersonaje(allPlayers);
 };
 
-// ------------------------- Funcion para printar la pantalla de Seleccion -----------------------------------
+// ------------------------- Funcion para printar la pantalla de Seleccion ----------------------------------- //
 
 const printarSeleccionPersonaje = (allPlayers) => {
     let  imgSeleccion = document.getElementsByClassName('imgSeleccion');
@@ -31,10 +33,10 @@ const printarSeleccionPersonaje = (allPlayers) => {
 }
 
 
-// ------------------------- Se printa los inicios de la carrera  -----------------------------------
+// ------------------------- Se printa los inicios de la carrera  ----------------------------------- //
 circuito1.printarCarrera();
 
-// ------------------------- Anyade un Listener al al boton de correr para que pase la ronda -----------------------------------
+// ------------------------- Anyade un Listener al al boton de correr para que pase la ronda ----------------------------------- //
 document.getElementById('buttonCorrer').addEventListener('click', function () {
     circuito1.start();
 });

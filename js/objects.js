@@ -1,7 +1,4 @@
-let participantes = [];
-let personajeSeleccionado = [];
-let corredoresRivales = [];
-
+// ------------------------- Declaracion de la clase Pilot ----------------------------------- //
 class Pilot{
 
     constructor(nombre, velocidadMax, velocidadMin, peso, img, gif){
@@ -17,15 +14,19 @@ class Pilot{
         this.img = img;
         this.gif = gif;
     }
+    
+    // --------------------- Suma los metros que totales que ha realizado en esa vuelta --------------------- //
     recorrido(){
         this.metrosRealizados += this.velocidadActual;
     }
     
+    // --------------------- Elige un numero aleatorio para dar la velocidad de esa ronda --------------------- //
     acelerar(){
         this.velocidadActual = parseInt(Math.random() * (this.velocidadMax - this.velocidadMin) + this.velocidadMin);
         this.recorrido();
     }
 
+    // --------------------- Comprueba si el piloto ha hecho una vuelta y si a acabado la carrera --------------------- //
     pasarVuelta(metrosVuelta, vueltaMax){
         if (this.vuelta < vueltaMax && this.metrosRealizados >= metrosVuelta) {
                 this.vuelta ++;
@@ -38,11 +39,10 @@ class Pilot{
             return this;
         }
         return null;
-
     }
-
 }
 
+// ------------------------- Declaracion de la clase Circuito ----------------------------------- //
 class Circuito{
     constructor(nombre, metrosVuelta, coches, vueltaMax){
         this.nombre = nombre;
@@ -52,8 +52,8 @@ class Circuito{
         this.vueltaMax = vueltaMax;
     }
 
+    // --------------------- Recoloca los pilotos por orden --------------------- //
     posicion(){
-        // Ordeno array 
         this.coches = this.coches.sort((i, z) => z.vuelta - i.vuelta);
         let cochesOrdenados = [];
         for (let i = this.vueltaMax; i >= -1; i--) {
@@ -65,7 +65,6 @@ class Circuito{
                 cochesOrdenados.push(coche);
             }
         }
-
         this.coches = cochesOrdenados;
 
         for (let i = 0; i < this.coches.length; i++) {
@@ -73,6 +72,7 @@ class Circuito{
         }
     }
 
+    // --------------------- Llama a los metodos que dan la funcionalidad de la carrera --------------------- //
     start() {
         this.cochesFinalizados = [];
         for (let i = 0; i < this.coches.length; i++) {
@@ -85,10 +85,10 @@ class Circuito{
         this.posicion();
         this.printarCarrera();
 
-        this.finalizacionCarrera();
-        
+        this.finalizacionCarrera(); 
     }
     
+    // --------------------- Mira que tres pilotos hayan acabado la carrera para finalizar la partida --------------------- //
     finalizacionCarrera () {
         if (this.cochesFinalizados.length >= this.coches.length-1) {
             console.log('CARRERA FINALIZADA');
@@ -98,6 +98,7 @@ class Circuito{
         }
     }
 
+    // --------------------- Printa las cartas en cada turno de la carrera --------------------- //
     printarCarrera() {
         let piloto = document.getElementsByClassName('pilotoCarrera');
         let velocidad = document.getElementsByClassName('velocidad');
@@ -112,7 +113,8 @@ class Circuito{
             img[i].src = this.coches[i].img;
         }
     }
-    // ------------------------- Funcion printar el podio -----------------------------------
+
+    // ------------------------- Funcion printar el podio ----------------------------------- //
     pintaPodio ()  {
         let img = document.getElementsByClassName('imgPodio');
         let piloto = document.getElementsByClassName('pilotoPodio');
@@ -121,24 +123,19 @@ class Circuito{
             piloto[i].innerHTML = this.cochesFinalizados[i].nombre;
             img[i].src = this.cochesFinalizados[i].img;
         }
-
-
     }
 
 }
 
 // ------------------------- Funcion para seleccionar corredores -----------------------------------
-
 const seleccionarCorredor = (corredorSeleccionado) =>{
     if (corredoresRivales.length < 3) {
         if (personajeSeleccionado.length < 1) {
             personajeSeleccionado.push(allPlayers[corredorSeleccionado]);
             participantes.push(allPlayers[corredorSeleccionado]);
-
         } else {
             corredoresRivales.push(allPlayers[corredorSeleccionado]);
             participantes.push(allPlayers[corredorSeleccionado]);
-
             if (corredoresRivales.length == 3) {
                 printLoading();
             }
@@ -149,25 +146,27 @@ const seleccionarCorredor = (corredorSeleccionado) =>{
     }
 }
 
-//corredores seleccionados pantalla loading
-
+// --------------------- Printa el Loading --------------------- //
 const printLoading = () =>{
     for (let i = 0; i < participantes.length; i++) {
         let img = document.getElementsByClassName('cargap')
         cambiarPantalla('pantallaLoading');
         img[i].src = participantes[i].gif;
 
-                setTimeout (() => {
-                    cambiarPantalla('pantallaCarrera');
-                }, 3000);
-
-                circuito1.printarCarrera();
+        setTimeout (() => {
+            cambiarPantalla('pantallaCarrera');
+        }, 3000);
         
+        circuito1.printarCarrera();
     }
 }
 
+// ------------------------- Variables principales ----------------------------------- //
+let participantes = [];
+let personajeSeleccionado = [];
+let corredoresRivales = [];
 
-//Instancia corredores
+//Instancias de la clase Pilot
 let player1 = new Pilot("Mario",70,15, "intermedio", '../img/corredores/mario.png', '../img/corredores/mario.gif');
 let player2 = new Pilot("Luigi",70,15, "intermedio", '../img/corredores/luigi.png', '../img/corredores/luigi.gif');
 let player3 = new Pilot("Peach",80,10, "ligero", '../img/corredores/peach.png', '../img/corredores/Peach.gif');
@@ -176,7 +175,6 @@ let player5 = new Pilot("Toad",90,5, "muy ligero", '../img/corredores/toad.png',
 let player6 = new Pilot("Koopa",90,5, "muy ligero", '../img/corredores/koopa.png', '../img/corredores/koopa.gif');
 let player7 = new Pilot("Bowser",60,20,"pesado", '../img/corredores/bowser.png', '../img/corredores/bowser.gif');
 let player8 = new Pilot("DK",60,20,"pesado", '../img/corredores/dk.png', '../img/corredores/DK.gif');
-
 
 let allPlayers = {
     "1" : player1,
@@ -189,5 +187,5 @@ let allPlayers = {
     "8" : player8
 };
 
-//Instancio circuitos
-let circuito1 = new Circuito("Reino Campinyon", 500, participantes, 1);
+//Intancia de la clase Circuito
+let circuito1 = new Circuito("Reino Campinyon", 500, participantes, 3);
