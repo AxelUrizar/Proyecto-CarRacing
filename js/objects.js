@@ -167,14 +167,14 @@ let personajeSeleccionado = [];
 let corredoresRivales = [];
 
 //Instancias de la clase Pilot
-let player1 = new Pilot("Mario",70,15, "intermedio", '../img/corredores/mario.png', '../img/corredores/mario.gif');
-let player2 = new Pilot("Luigi",70,15, "intermedio", '../img/corredores/luigi.png', '../img/corredores/luigi.gif');
-let player3 = new Pilot("Peach",80,10, "ligero", '../img/corredores/peach.png', '../img/corredores/Peach.gif');
-let player4 = new Pilot("Yoshi",80,10, "ligero", '../img/corredores/yoshi.png', '../img/corredores/yoshy.gif');
-let player5 = new Pilot("Toad",90,5, "muy ligero", '../img/corredores/toad.png', '../img/corredores/toad.gif');
-let player6 = new Pilot("Koopa",90,5, "muy ligero", '../img/corredores/koopa.png', '../img/corredores/koopa.gif');
-let player7 = new Pilot("Bowser",60,20,"pesado", '../img/corredores/bowser.png', '../img/corredores/bowser.gif');
-let player8 = new Pilot("DK",60,20,"pesado", '../img/corredores/dk.png', '../img/corredores/DK.gif');
+let player1 = new Pilot("Mario",70,15, "intermedio", 'img/corredores/mario.png', 'img/corredores/mario.gif');
+let player2 = new Pilot("Luigi",70,15, "intermedio", 'img/corredores/luigi.png', 'img/corredores/luigi.gif');
+let player3 = new Pilot("Peach",80,10, "ligero", 'img/corredores/peach.png', 'img/corredores/Peach.gif');
+let player4 = new Pilot("Yoshi",80,10, "ligero", 'img/corredores/yoshi.png', 'img/corredores/yoshy.gif');
+let player5 = new Pilot("Toad",90,5, "muy ligero", 'img/corredores/toad.png', 'img/corredores/toad.gif');
+let player6 = new Pilot("Koopa",90,5, "muy ligero", 'img/corredores/koopa.png', 'img/corredores/koopa.gif');
+let player7 = new Pilot("Bowser",60,20,"pesado", 'img/corredores/bowser.png', 'img/corredores/bowser.gif');
+let player8 = new Pilot("DK",60,20,"pesado", 'img/corredores/dk.png', 'img/corredores/DK.gif');
 
 let allPlayers = {
     "1" : player1,
