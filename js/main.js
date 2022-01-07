@@ -1,6 +1,6 @@
 // ------------------------- Poner musica al juego ----------------------------------- //
 
-let music = new Audio('/music/StartScreen.mp3');
+let music = new Audio('music/StartScreen.mp3');
 music.loop = true;
 music.volume = 0.3;
 music.playbackRate = 1;
@@ -20,7 +20,7 @@ const cambiarPantalla = (pantalla) => {
     
     if (pantalla === 'pantallaInicio') {
             music.pause();
-            music = new Audio('/music/StartScreen.mp3');
+            music = new Audio('music/StartScreen.mp3');
             music.play();
             music.loop = true;
             music.volume = 0.2;
@@ -28,7 +28,7 @@ const cambiarPantalla = (pantalla) => {
     }
     if (pantalla === 'pantallaPersonajes') {
         music.pause();
-        music = new Audio('/music/MainMenu.mp3');
+        music = new Audio('music/MainMenu.mp3');
         music.play();
         music.loop = true;
         music.volume = 0.2;
@@ -36,7 +36,7 @@ const cambiarPantalla = (pantalla) => {
     }
     if (pantalla === 'pantallaInicio') {
         music.pause();
-        music = new Audio('/music/StartScreen.mp3');
+        music = new Audio('music/StartScreen.mp3');
         music.play();
         music.loop = true;
         music.volume = 0.2;
@@ -44,7 +44,7 @@ const cambiarPantalla = (pantalla) => {
     }
     if (pantalla === 'pantallaLoading') {
         music.pause();
-        music = new Audio('/music/MarioKartStadium.mp3');
+        music = new Audio('music/MarioKartStadium.mp3');
         music.play();
         music.loop = true;
         music.volume = 0.2;
@@ -52,7 +52,7 @@ const cambiarPantalla = (pantalla) => {
     }
     if (pantalla === 'pantallaCarrera') {
         music.pause();
-        music = new Audio('/music/MountWario.mp3');
+        music = new Audio('music/MountWario.mp3');
         music.play();
         music.loop = true;
         music.volume = 0.2;
@@ -60,7 +60,7 @@ const cambiarPantalla = (pantalla) => {
     }
     if (pantalla === 'pantallaPodio') {
         music.pause();
-        music = new Audio('/music/GoodResult.mp3');
+        music = new Audio('music/GoodResult.mp3');
         music.play();
         music.loop = true;
         music.volume = 0.2;
