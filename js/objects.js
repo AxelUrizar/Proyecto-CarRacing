@@ -4,7 +4,7 @@ let corredoresRivales = [];
 
 class Pilot{
 
-    constructor(nombre, velocidadMax, velocidadMin, peso, img){
+    constructor(nombre, velocidadMax, velocidadMin, peso, img, gif){
         this.nombre = nombre;
         this.velocidadMax = velocidadMax;
         this.velocidadMin = velocidadMin;
@@ -15,6 +15,7 @@ class Pilot{
         this.posicion = 'En salida';
         this.pasarMeta = false;
         this.img = img;
+        this.gif = gif;
     }
     recorrido(){
         this.metrosRealizados += this.velocidadActual;
@@ -89,7 +90,7 @@ class Circuito{
     }
     
     finalizacionCarrera () {
-        if (this.cochesFinalizados.length === this.coches.length-1) {
+        if (this.cochesFinalizados.length >= this.coches.length-1) {
             console.log('CARRERA FINALIZADA');
             console.log(this.cochesFinalizados);
             cambiarPantalla('pantallaPodio');
@@ -139,13 +140,7 @@ const seleccionarCorredor = (corredorSeleccionado) =>{
             participantes.push(allPlayers[corredorSeleccionado]);
 
             if (corredoresRivales.length == 3) {
-                cambiarPantalla('pantallaLoading');
-
-                setTimeout (() => {
-                    cambiarPantalla('pantallaCarrera');
-                }, 3000);
-
-                circuito1.printarCarrera();
+                printLoading();
             }
         }
 
@@ -154,16 +149,33 @@ const seleccionarCorredor = (corredorSeleccionado) =>{
     }
 }
 
+//corredores seleccionados pantalla loading
 
-//Instancio corredores
-let player1 = new Pilot("Mario",70,15, "intermedio", '../img/corredores/mario.png');
-let player2 = new Pilot("Luigi",70,15, "intermedio", '../img/corredores/luigi.png');
-let player3 = new Pilot("Peach",80,10, "ligero", '../img/corredores/peach.png');
-let player4 = new Pilot("Yoshi",80,10, "ligero", '../img/corredores/yoshi.png');
-let player5 = new Pilot("Toad",90,5, "muy ligero", '../img/corredores/toad.png');
-let player6 = new Pilot("Tortuga",90,5, "muy ligero", '../img/corredores/koopa.png');
-let player7 = new Pilot("Bowser",60,20,"pesado", '../img/corredores/bowser.png');
-let player8 = new Pilot("DK",60,20,"pesado", '../img/corredores/dk.png');
+const printLoading = () =>{
+    for (let i = 0; i < participantes.length; i++) {
+        let img = document.getElementsByClassName('cargap')
+        cambiarPantalla('pantallaLoading');
+        img[i].src = participantes[i].gif;
+
+                setTimeout (() => {
+                    cambiarPantalla('pantallaCarrera');
+                }, 3000);
+
+                circuito1.printarCarrera();
+        
+    }
+}
+
+
+//Instancia corredores
+let player1 = new Pilot("Mario",70,15, "intermedio", '../img/corredores/mario.png', '../img/corredores/mario.gif');
+let player2 = new Pilot("Luigi",70,15, "intermedio", '../img/corredores/luigi.png', '../img/corredores/luigi.gif');
+let player3 = new Pilot("Peach",80,10, "ligero", '../img/corredores/peach.png', '../img/corredores/Peach.gif');
+let player4 = new Pilot("Yoshi",80,10, "ligero", '../img/corredores/yoshi.png', '../img/corredores/yoshy.gif');
+let player5 = new Pilot("Toad",90,5, "muy ligero", '../img/corredores/toad.png', '../img/corredores/toad.gif');
+let player6 = new Pilot("Koopa",90,5, "muy ligero", '../img/corredores/koopa.png', '../img/corredores/koopa.gif');
+let player7 = new Pilot("Bowser",60,20,"pesado", '../img/corredores/bowser.png', '../img/corredores/bowser.gif');
+let player8 = new Pilot("DK",60,20,"pesado", '../img/corredores/dk.png', '../img/corredores/DK.gif');
 
 
 let allPlayers = {

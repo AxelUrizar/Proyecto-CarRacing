@@ -13,6 +13,10 @@
     font-size: 1.1em;
 }
 
+h1, h2, p{
+    user-select: none;
+}
+
 h2 {
     font-family: mario;
     color: silver;
@@ -25,6 +29,10 @@ h2 {
 .marioNumeros {
     font-family: marioNumeros;
     font-size: 2em;
+}
+
+.row{
+    --bs-gutter-x: 0;
 }
 
 /*----------------- Default Pantallas ------------------*/
@@ -59,6 +67,7 @@ h2 {
     background-color: red;
     font-size: 8px;
     width: 18rem;
+    user-select: none;
  }
 /* ---------------- Pantalla Inicio -------------------*/
 
@@ -69,14 +78,15 @@ h2 {
     background-size: cover;
     display: flex;
     align-items: end;
+    height: 100vh;
 }
 
 #pantallaInicio p{
-    margin-bottom: 8%;
+    margin-bottom: 5%;
 }
 
 #pantallaInicio p:hover{
-    margin-bottom: 7.8%;
+    margin-bottom: 4.8%;
 }
 /* ---------------- Pantalla Personajes -------------------*/
 
@@ -88,15 +98,25 @@ h2 {
     background-size: cover;
     flex-direction: column;
     align-items:center;
-    justify-content: space-around;
+    justify-content: start;
 }
 
 #pantallaPersonajes{
     margin: 0 auto;
 }
 
+#tituloSeleccion{
+    height: 15%;
+    width: 100%;
+}
+
+    #tituloSeleccion h2{
+        margin: 0;
+    }
+
 #rooster{
-    margin-bottom: 8em;
+    height: 70%;
+    width: 90%;
 }
 
 #pantallaPersonajes .card {
@@ -104,18 +124,18 @@ h2 {
     transition: 0.2s;
 }
 
-#pantallaPersonajes .card:hover {
-    width: 23em;
-    cursor: pointer;
-    transition: 0.2s;
-    background: rgb(69, 69, 207);
-}
+    #pantallaPersonajes .card:hover {
+        width: 23em;
+        cursor: pointer;
+        transition: 0.2s;
+        background: rgb(69, 69, 207);
+    }
 
 .personajeSeleccionado {
     background: rgb(69, 69, 207);
     width: 23em!important;
 }
-/*----------------- Pantalla Carga --------------------*/
+/*----------------- Pantalla Loading --------------------*/
 
 #pantallaLoading{
     background-image: url(../img/photo_2022-01-02_12-25-49.jpg);
@@ -125,43 +145,31 @@ h2 {
     display: none;
 }
 
-.cargap1{
-    position: relative;
-    bottom: 10em;
-    right: 30em;
-    
+.cajaAllLoading{
+    width: 100vw;
+    height: 100vh;
+
 }
 
-.cargap2{
-    position: relative;
-    right: 25em;
+.cajaCoches{
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
 }
 
-.cargap3{
-    position: relative;
-    bottom: 10em;
-    right: 20em;
-}
-
-.cargap4{
-    position: relative;
-    right: 15em;
+.cajaLoadingPuntos{
+    height: 20%;
 }
 
 .loading{
-    position: relative;
     color: darkred;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.527);
     font-style: oblique;
-    top: 7em;
-    left: 1em;
+    margin-bottom: 0;
 }
 
 .preload{
-    position: relative;
     width: 5em;
-    top: 17.5em;
-    left: 4em;
 }
 
 /* ---------------- Pantalla Carrera -------------------*/
@@ -172,7 +180,32 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
+
+.letsRace{
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 2px red;
+    font-size: 1.6em;
+}
+
+#pantallaCarrera .row{
+    --bs-gutter-x: 1.5rem;
+}
+
+#pantallaCarrera .card{
+    width: 30em;
+}
+
+    #pantallaCarrera .vuelta, 
+    #pantallaCarrera .velocidad{
+        padding: 0;
+        padding-bottom: 0.3em;  
+    }
+
+    #pantallaCarrera .metrosParaVuelta{
+        padding-bottom: 0.2em;
+    }
 
 #coches {
     display: flex;
@@ -187,18 +220,35 @@ h2 {
 
 }
 
-/* ---------------------boton correr--------------------  */
-#buttonCorrer{
-    position: relative;
-    background-color: red;
-    border: solid 25px goldenrod;
-    color: white;
-    border-radius: 50%;
-    width: 20em;
-    height: 20em;
-    block-size: 100px;
+        /* ---------------------boton correr--------------------  */
+
+.cajaButtonCorrer{
+    width: 8em;
+    height: 8em;
+    margin-bottom: 1%;
 }
 
+.buttonCorrer{
+    width: 7em;
+    height: 7em;
+    background-image: url(../img/rueda.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+    .buttonCorrer p{
+        color: red;
+        -webkit-text-stroke: 2px rgb(255, 255, 255);
+        font-size: 1.6em;
+    }
+
+.buttonCorrer:active{
+    transition: 0.2s;
+    font-size: 1.2em;
+}
 /* ---------------- Pantalla Podio -------------------*/
 
 #pantallaPodio{
@@ -209,10 +259,23 @@ h2 {
     background-size: cover;
 }
 
-
+#pantallaPodio .row{
+    --bs-gutter-x: 1.5rem;
+}
 
 .contPodio {
     background-image: url(../img/confetti.gif);
+    height: auto;
+    
+}
+
+.cardPodio{
+    width: 30em;
+}
+
+.imgPodio{
+    width: 23em;
+    margin: auto;
 }
 
 #numOro {
@@ -230,15 +293,119 @@ h2 {
     color: orange;
 }
 
-
-@media (max-width: 1446px) {
-    #pantallaPodio {
-        height: auto;
-    }
+#volverAJugar{
+    width: fit-content;
+    
 }
 
-@media (max-width: 991px) {
-    #pantallaCarrera {
-        height: auto;
+.volverAJugarCaja{
+    height: 5em;
+}
+
+.volverButton{
+    font-size: 0.5em;
+    padding: 0.3em 0.7em;
+    border: solid 4px red;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.774);
+    transition: 0.2s;
+    margin-bottom: 0;
+}
+
+    .volverButton:hover {
+        cursor: pointer;
+        font-size: 0.6em;
+        transition: 0.2s;
+    }
+
+@media (max-width: 992px) /*and (min-width: 577px)*/{
+   
+    .pantallas {
+        width: 100%;
+        height: 100%;
+    }
+    
+    #pantallaPersonajes{
+        background-image: url(../img/fondoMovil.jpg);
+        background-position: center;
+    }
+
+    /* #tituloCarrera{
+        height: 30%;
+    } */
+
+    #coches{
+        width: 90%;
+        /* height: 70%; */
+    }
+
+        #coches .card{
+            width: 90%;
+        }
+        
+
+    #pantallaPodio{
+        height: 100vh;
+    }
+
+    .loadingAbajo{
+        margin-top: 2em;
+    }
+
+    .cajaLoadingPuntos{
+        margin: 0 auto!important;
+    }
+
+    
+}
+
+@media (max-width: 767px) {
+    
+    #coches .card li{
+        font-size: 0.8em;
+    } 
+
+    
+}
+
+@media (max-width: 576px) {
+
+    #pantallaPersonajes > div{
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+    }
+
+    #pantallaPersonajes h2{
+        font-size: 1em;
+    }
+    
+    
+
+    #pantallaPodio{
+        height: 100%;
+    }
+
+    .contPodio{
+        height: 100%;
+    }
+
+    #pantallaLoading{
+        height: 100%;
+        font-size: 1em;
+    }
+
+    #pantallaLoading img{
+        width: 5em;
+    }
+
+        .pilotosLoading{
+            width: 50%;
+        }
+
+    #pantallaLoading .loading{
+        font-size: 1em;
+    }
+    #pantallaLoading .preload{
+        width: 3em;
     }
 }
