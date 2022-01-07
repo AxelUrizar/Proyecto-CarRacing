@@ -18,9 +18,9 @@ Para desplegar la aplicacion hemos usado GitHub pages
 
 ## Construido con 🛠️
 
-- [HTML](http://www.dropwizard.io/1.0.2/docs/)
-- [CSS](https://maven.apache.org/)
-- [JS](https://rometools.github.io/rome/)
+- [HTML](https://developer.mozilla.org/es/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+- [JS](https://www.javascript.com/)
 
 ## Autores ✒️
 
