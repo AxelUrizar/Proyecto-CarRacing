@@ -14,7 +14,7 @@ Este proyecto trata de simular una carrera de coches.
 
 Para desplegar la aplicacion hemos usado GitHub pages
 
-[Ver pagina](http://www.dropwizard.io/1.0.2/docs/)
+[Ver pagina](https://axelurizar.github.io/Proyecto-CarRacing/)
 
 ## Construido con 🛠️
 
@@ -25,7 +25,7 @@ Para desplegar la aplicacion hemos usado GitHub pages
 ## Autores ✒️
 
 - **Manel Barreda** - [Manelus](https://github.com/Manelus)
-- **Axel** - [AxelUrizar](https://github.com/AxelUrizar)
+- **Axel Urizar** - [AxelUrizar](https://github.com/AxelUrizar)
 - **Rafael Garcia** - [Rafael3994](https://github.com/Rafael3994)
 
 ## Licencia 📄
