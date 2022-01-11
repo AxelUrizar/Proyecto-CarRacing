@@ -12,7 +12,7 @@ music.play();
 const cambiarPantalla = (pantalla) => {
     
     let arrPantallas = ['pantallaInicio', 'pantallaPersonajes', 'pantallaLoading' ,'pantallaCarrera', 'pantallaPodio'];
-    arrPantallas = arrPantallas.filter(val => !pantalla.includes(val));
+    arrPantallas = arrPantallas.filter((val) => !pantalla.includes(val));
     document.getElementById(pantalla).style.display ='flex';
         for (let _pantalla of arrPantallas){
             document.getElementById(_pantalla).style.display = 'none';
